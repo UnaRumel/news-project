@@ -1,1 +1,1 @@
-**GoIT JavaScript Course**\
+**GoIT JavaScript Course**
