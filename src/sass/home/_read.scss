@@ -1,0 +1,64 @@
+.accordion {
+  background-color: inherit;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 1px solid #929292;
+  margin-bottom: 60px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+  // color: #111321;
+}
+.accordion::after {
+  content: '';
+  background: url('../images/arrow-down.svg') 0 4px no-repeat;
+  width: 15px;
+  height: 15px;
+  color: inherit;
+  float: right;
+  transform: var(--rotate, rotate(0deg));
+  transition: transform 700ms;
+}
+.readmore {
+  padding: 60px 0;
+}
+
+// .active .accordion:after {
+//   content: '';
+// }
+
+.panel {
+  padding: 0 18px;
+  background-color: inherit;
+  display: none;
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
+  row-gap: 28px;
+  column-gap: 30px;
+  @include tablet {
+    justify-content: start;
+    row-gap: 30px;
+  }
+  @include desktop {
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+}
+
+.accordion--dark {
+  color: var(--third-color);
+}

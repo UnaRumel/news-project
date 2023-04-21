@@ -1,1 +1,1 @@
-# news-project
+**GoIT JavaScript Course**\

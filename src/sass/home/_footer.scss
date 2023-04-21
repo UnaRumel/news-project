@@ -1,0 +1,155 @@
+footer {
+  width: 100%;
+  // height: 146px;
+
+  background-image: url(/src/images/flag-ukraine.jpg);
+  // background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    min-width: 320px;
+    // height: 120px;
+    background-image: url(/src/images/flag-ukraine.jpg);
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  footer {
+    min-width: 768px;
+    height: 146px;
+    background-image: url(/src/images/flag-ukraine.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.footer__new-page{
+  @include mobile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.footer__info{
+  @include mobile{
+ 
+  display: flex;
+  justify-content: flex-start;
+}
+  @include tablet{
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.footer__new-page{
+  @include mobile{
+    font-size: 14px;
+    padding-left: 7px;
+    padding-top:30px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  @include tablet{
+    padding-left: 80px;
+    padding-top:30px;
+    font-size: 30px;
+  }
+  @include desktop{
+    padding-left: 200px;
+    padding-top:37px;
+    font-size: 45px;
+  }
+}
+
+.footer__svg-globe{
+  @include mobile{
+    width: 16px;
+    height: 16px;
+   margin-right: 5px;
+  }
+  @include tablet{
+    width: 22px;
+    height: 22px;
+  }
+  @include desktop{
+    width: 30px;
+    height: 30px;
+  }
+}
+.photo__victory{
+  @include mobile{
+    width: 130px;
+    height: 130px;
+  }
+  @include tablet{
+    width: 130px;
+height:130 px;
+  }
+  @include desktop{
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+.footer__fav-page{
+  @include mobile{
+    padding-left: 7px;
+    padding-top:68px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  @include tablet{
+    padding-left: 60px;
+    padding-top:67px;
+    font-size:35px;
+  }
+  @include desktop{
+    padding-left: 200px;
+    padding-top:68px;
+    font-size:45px;
+  }
+}
+
+.footer__read-page{
+  @include mobile{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top:45px;
+  }
+  @include tablet{
+    font-size: 30px;
+    text-align: center;
+    padding-top:70px;
+    padding-left:20px;
+  }
+  @include desktop{
+    font-size: 47px;
+    text-align: center;
+    padding-top:70px;
+    padding-left:180px;
+  }
+}
+
+
+.footer__read-link{
+  @include mobile{
+    padding-left: 7px;
+   
+  }
+  
+}
+
+.icon__web--dark{
+  fill:darkblue;
+}
+
+

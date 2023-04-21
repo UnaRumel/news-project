@@ -1,0 +1,408 @@
+.weather-card {
+  z-index: 3; /* без індексу*/
+  background-color: #4440f6;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @include mobile {
+    width: 288px;
+    height: 469px;
+  }
+  @include tablet {
+    position: absolute;
+    right: 0;
+    width: 353px;
+    height: 675px;
+  }
+  @include desktop {
+    width: 397px; /* width:395px*/
+    height: 675px;
+  }
+  margin: 0 auto;
+}
+
+.temperature,
+.description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @include tablet {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.weather-icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.week-weather-btn {
+  display: block;
+  @include mobile {
+    width: 151px;
+    height: 34px;
+  }
+  @include tablet {
+    width: 177px;
+    height: 42px;
+  }
+  @include desktop {
+    width: 177px;
+    height: 42px;
+  }
+  background: rgba(254, 254, 255, 0.3);
+  border-radius: 10px;
+  margin: 0 auto;
+  border-color: transparent;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @include tablet {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  @include desktop {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 110px;
+    margin-bottom: 28px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 110px;
+    margin-bottom: 28px;
+  }
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.city-name {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 4px;
+  }
+  @include tablet {
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 7px;
+  }
+  @include desktop {
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 7px;
+  }
+  color: #ffffff;
+  margin: 0;
+  gap: 8px;
+
+  background: rgba(254, 254, 255, 0.3);
+  border-radius: 10px;
+}
+
+.extra-part {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.top-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  @include mobile {
+    margin-bottom: 60px;
+  }
+  @include tablet {
+    margin-bottom: 110px;
+  }
+  @include desktop {
+    margin-bottom: 110px;
+  }
+}
+.temperature {
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  border-right: 1px solid #ffffff;
+  margin: 0;
+  @include mobile {
+    font-size: 32px;
+    line-height: 37px;
+    padding-top: 3px;
+    padding-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 64px;
+    line-height: 75px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+  }
+  @include desktop {
+    font-size: 64px;
+    line-height: 75px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+}
+.description {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.week-forecast-list {
+  display: flex;
+  flex-direction: column;
+
+  align-items: baseline;
+  @include mobile {
+    gap: 15px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  @include tablet {
+    gap: 30px;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    gap: 30px;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+}
+.week-weather-body {
+  display: flex;
+}
+.week-weather-date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 11px;
+  }
+  @include tablet {
+    font-size: 15px;
+  }
+  @include desktop {
+    font-size: 15px;
+  }
+  color: #ffff;
+  margin-bottom: 3px;
+}
+.week-weather-item {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+    margin-top: 1px;
+  }
+  @include tablet {
+    margin-top: 10px;
+  }
+  @include desktop {
+    margin-top: 10px;
+  }
+}
+
+.today-forecast-btn {
+  display: block;
+  @include mobile {
+    width: 151px;
+    height: 30px;
+  }
+  @include tablet {
+    margin-top: 10px;
+    width: 177px;
+    height: 42px;
+  }
+  @include desktop {
+    margin-top: 10px;
+    width: 177px;
+    height: 42px;
+  }
+  background: rgba(254, 254, 255, 0.3);
+  border-radius: 10px;
+  margin: 0 auto;
+  border-color: transparent;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @include tablet {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  @include desktop {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.week-weather-desc {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 13px;
+  }
+  @include tablet {
+    font-size: 15px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
+  text-align: center;
+  color: #ffffff;
+  margin-left: 10px;
+}
+.week-weather-temp {
+  display: block;
+  width: 80px;
+  font-family: 'Roboto';
+  border-right: 1px solid #ffffff;
+  padding-right: 5px;
+  font-style: normal;
+  font-weight: 400;
+  @include mobile {
+    font-size: 15px;
+  }
+  @include tablet {
+    font-size: 15px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+  text-align: center;
+  color: #ffffff;
+}
+.week-weather-icon {
+  margin-right: 15px;
+  @include mobile {
+    width: 45px;
+    height: 40px;
+  }
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+  @include desktop {
+    width: 60px;
+    height: 60px;
+  }
+}
+.today-forecast-btn:hover,
+.today-forecast-btn:focus {
+  background-color: #ffff;
+  color: #4440f6;
+}
+.week-weather-btn:hover,
+.week-weather-btn:focus {
+  background-color: #ffff;
+  color: #4440f6;
+}
+.icon {
+  @include mobile {
+    width: 18px;
+    height: 18px;
+  }
+  @include tablet {
+    width: 27px;
+    height: 27px;
+  }
+  @include desktop {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.icon-item {
+  display: flex;
+
+  @include mobile {
+    margin-left: 20px;
+    width: 250px;
+    padding-top: 5px;
+  }
+  @include tablet {
+    width: 280px;
+    margin-left: 30px;
+    padding-top: 0;
+  }
+  @include desktop {
+    margin-left: 50px;
+    width: 320px;
+    padding-top: 0;
+  }
+}
+
+.icon-item:not(:first-child) {
+  border-top: 1px solid #ffffff;
+}
+
+.week-item-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-item:first-child {
+  @include mobile {
+    padding-top: 0;
+  }
+}

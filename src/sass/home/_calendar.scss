@@ -1,0 +1,250 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  height: 31px;
+
+  @include desktop {
+    padding-right: 36px;
+  }
+}
+
+.calendar__text {
+  padding: 0 13px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  z-index: 9;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.calendar__box {
+  display: flex;
+}
+
+.calendar__box-input {
+  display: flex;
+  position: relative;
+  height: 31px;
+  width: 151px;
+  border-radius: 20px;
+  z-index: 11;
+  color: #4440f6;
+  transition: color 300ms ease;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+  }
+
+  @include desktop {
+    width: 168px;
+  }
+}
+
+.calendar__icon {
+  position: absolute;
+  fill: currentColor;
+  top: 7px;
+  left: 13px;
+  right: auto;
+}
+
+.calendar__icon--arrow {
+  top: 11px;
+  left: auto;
+  right: 12px;
+  transition: transform 300ms ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.bias {
+  transform: translateY(120%);
+}
+
+.calendar__input {
+  box-sizing: border-box;
+  height: 31px;
+  width: 151px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 7.5px 30px;
+  text-align: center;
+  color: #ffffff;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  border: 1px solid #111321;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+
+  &:focus,
+  &:hover {
+    border: 1px solid #4440f6;
+    background-color: #4440f6;
+  }
+
+  @include desktop {
+    width: 168px;
+  }
+}
+
+.calendar__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #a2a2a2;
+
+  &:focus {
+    color: #ffffff;
+  }
+}
+
+.calendar__container {
+  position: absolute;
+  bottom: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+  transition: transform 300ms ease;
+}
+
+.calendar__calendar {
+  width: 250px;
+  height: 300px;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 27px 16.5px 20px;
+}
+
+.calendar__month-year {
+  display: flex;
+}
+
+.calendar__month {
+  width: 55%;
+  margin-right: auto;
+}
+
+.calendar__year {
+  width: 33%;
+}
+
+.calendar__month,
+.calendar__year {
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+.calendar__month i,
+.calendar__year i {
+  font-size: 17px;
+  cursor: pointer;
+  color: #4440f6;
+}
+
+.calendar__month h1,
+.calendar__year h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: -0.408px;
+  text-transform: uppercase;
+  padding: 0 8px;
+  margin: auto;
+  color: #000000;
+}
+
+.calendar__month p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.79;
+  letter-spacing: 0.38px;
+}
+
+.calendar__weekdays {
+  width: 100%;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.calendar__weekdays div {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.078px;
+  width: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #3c3c434d;
+}
+
+.calendar__days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__days div {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.79;
+  margin: 0;
+  letter-spacing: 0.38px;
+  width: calc(100% / 7);
+  height: 31px;
+  border-radius: 50%;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  color: #000000;
+}
+
+.calendar__days div:hover:not(.today) {
+  height: 31px;
+  width: 31px;
+  margin: auto;
+  background-color: #4440f6;
+  border: 1px solid #4440f6;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 300ms ease;
+}
+
+.calendar__prev-date,
+.calendar__next-date {
+  opacity: 0.5;
+}
+
+.calendar__today {
+  background-color: #4440f6;
+}
+
+.calendar__input--dark {
+  background-color: var(--bg-dark-color);
+}
